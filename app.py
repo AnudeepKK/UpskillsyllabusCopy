@@ -68,9 +68,10 @@
 from flask import Flask, request, jsonify
 from azure.core.credentials import AzureKeyCredential
 from azure.ai.formrecognizer import DocumentAnalysisClient
+from flask_cors import CORS
 
 app = Flask(__name__)
-
+CORS(app)
 # Azure Form Recognizer endpoint and API key
 endpoint = "https://resumedocumentref.cognitiveservices.azure.com/"
 key = "1b48e06c5b94480ca36afe65140d98ee"
